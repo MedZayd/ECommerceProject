@@ -1,7 +1,8 @@
 // @flow
 
 import React from "react";
-import HomePage from "./component/home-page/HomePage.component";
+
+import HomePage from "./component/home-page/HomePage.component.jsx";
 
 function App() {
   return <HomePage />;
