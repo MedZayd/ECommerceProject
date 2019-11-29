@@ -7,8 +7,6 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
     "plugin:jest/recommended",
     "plugin:jest/style"
   ],
@@ -24,9 +22,7 @@
     "ecmaVersion": 6,
     "sourceType": "module"
   },
-  "plugins": ["react", "material-ui", "simple-import-sort", "import", "jest"],
+  "plugins": ["react", "material-ui", "jest"],
   "settings": { "react": { "version": "detect" } },
-  "rules": {
-    "simple-import-sort/sort": "error"
-  }
+  "rules": {}
 }

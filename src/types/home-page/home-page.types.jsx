@@ -3,7 +3,8 @@
 export type MenuItemType = {
   id: number,
   title: string,
-  imgPath: string
+  imgPath: string,
+  cols: number
 };
 
 export type MenuListType = MenuItemType[];
