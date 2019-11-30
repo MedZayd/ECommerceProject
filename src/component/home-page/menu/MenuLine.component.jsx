@@ -1,6 +1,6 @@
 import { GridList, GridListTile, GridListTileBar } from "@material-ui/core";
 
-import type { MenuListType } from "../../../types/home-page/home-page.types";
+import type { MenuListType } from "../../../types/home-page/home-page-types.jsx";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
