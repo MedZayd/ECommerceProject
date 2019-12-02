@@ -1,2 +1,2 @@
-import HomePage from "./home-page-component.jsx";
+import HomePage from "./HomePageComponent";
 export default HomePage;

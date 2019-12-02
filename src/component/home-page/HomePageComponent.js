@@ -1,7 +1,7 @@
 // @flow
 
 import { Container } from "@material-ui/core";
-import MenuList from "./menu";
+import MenuList from "../menu-list";
 import React from "react";
 
 function HomePage() {

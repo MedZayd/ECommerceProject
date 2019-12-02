@@ -1,10 +1,10 @@
 // @flow
 
 export type MenuItemType = {
-  id: number,
+  urlPath: string,
   title: string,
-  imgPath: string,
-  cols: number
+  width: string,
+  height: number
 };
 
 export type MenuListType = MenuItemType[];
