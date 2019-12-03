@@ -1,20 +1,18 @@
 // @flow
 
+import {Route, Switch} from "react-router-dom";
+
 import HomePage from "./component/home-page";
 import React from "react";
-import {Route} from "react-router-dom";
-
-const HatsPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-)
+import ShopePage from "./component/shop-page";
 
 function App() {
   return (
     <div>
-      <Route exact path='/' component={HomePage} />
-      <Route exact path='/hats' component={HatsPage} />
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/shop' component={ShopePage} />
+      </Switch>
     </div>
   );
 }

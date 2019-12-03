@@ -1,15 +1,27 @@
 // @flow
 
-import { Container } from "@material-ui/core";
+import {Link} from "react-router-dom";
 import MenuList from "../menu-list";
 import React from "react";
+import { Typography } from "@material-ui/core";
+import {useStyles} from "./styles";
 
 function HomePage() {
+  const classes= useStyles();
   return (
-    <Container>
-      <h4>Home Page Component</h4>
+    <div className={classes.container}>
+      <div className={classes.header}>
+        <Typography variant="h4" component="h4" gutterBottom>
+          Home Page
+        </Typography>
+        <Link to='/shop' className={classes.link}>
+          <Typography variant="h5" component="h5" gutterBottom>
+            Shop
+          </Typography>
+        </Link>
+      </div>
       <MenuList />
-    </Container>
+    </div>
   );
 }
 
