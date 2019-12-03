@@ -3,8 +3,14 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import {menuList} from "../../utils/menu-list-properties";
 import {useStyles} from "./styles";
+import {withRouter} from "react-router-dom";
 
-export default function MenuList() {
+type Props = {
+  history: any,
+  match: any
+}
+
+const MenuList = ({history, match}: Props) => {
   const classes = useStyles();
 
   return (
@@ -19,6 +25,7 @@ export default function MenuList() {
             width: menuItem.width,
             height: menuItem.height
           }}
+          onClick={() => history.push(`${match.url}${menuItem.title}`)}
         >
           <span
             className={classes.imageSrc}
@@ -43,3 +50,5 @@ export default function MenuList() {
     </div>
   );
 }
+
+export default  withRouter(MenuList);
