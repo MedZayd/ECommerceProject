@@ -1,7 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { colors } from "../../../styles/colors";
+
 
 export const useStyles = makeStyles(() => ({
-  card: {
+	card: {
 		width: '100%',
 		height: 400,
 		border: "1px solid #fff",
@@ -9,20 +11,25 @@ export const useStyles = makeStyles(() => ({
 		margin: 5,
 		boxShadow: "0 1px 4px 0 #888888",
 		fontSize: 20,
-  },
-  header: {
+		backgroundColor: colors.white,
+		cursor: "pointer"
+	},
+	header: {
 		height: '10%',
 		display: 'flex',
-		justifyContent: 'space-between',
+		alignItems: "center",
 		padding: '5px 20px 5px 20px',
-  },
-  media: {
+	},
+	media: {
 		height: '75%',
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
-  },
-  content: {
+	},
+	content: {
 		height: '10%',
 		padding: '5px 20px 5px 20px',
-  }
+		display: 'flex',
+		alignItems: "center",
+		justifyContent: "flex-end"
+	}
 }));

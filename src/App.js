@@ -1,18 +1,27 @@
 // @flow
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
 
-import {Route, Switch} from "react-router-dom";
-
-import HomePage from "./component/home-page";
 import React from "react";
-import ShopePage from "./component/shop-page";
+import ShopePage from "./component/ShopPage";
+import MenuBar from "./component/MenuBar";
+import MenuList from "./component/MenuList";
+import NotFound from "./component/NotFound";
+
 
 function App() {
   return (
     <div>
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route exact path='/shop' component={ShopePage} />
-      </Switch>
+      <MenuBar />
+      <div className="contentContainer">
+        <div className="content">
+          <Switch>
+            <Route exact path='/' component={MenuList} />
+            <Route exact path='/shop' component={ShopePage} />
+            <Route path='*' component={NotFound} />
+          </Switch>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,15 +1,15 @@
 import CustomButtonBase from "../common/CustomButtonBase";
-import {Paper} from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import React from "react";
-import {menuList} from "../../utils/menu-list-properties";
-import {withRouter} from "react-router-dom";
+import { menuList } from "../../utils/menu-list-properties";
+import { withRouter } from "react-router-dom";
 
 type Props = {
   history: any,
   match: any
 }
 
-const MenuList = ({history, match}: Props) => {
+const MenuList = ({ history, match }: Props) => {
   return (
     <Paper elevation={5}>
       {menuList.map(menuItem => (
@@ -23,4 +23,4 @@ const MenuList = ({history, match}: Props) => {
   );
 }
 
-export default  withRouter(MenuList);
+export default withRouter(MenuList);

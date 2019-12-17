@@ -13,10 +13,10 @@ type Props = {
 export default function CollectionPreview({title, items}: Props) {
 	const classes = useStyles();
 	return (
-		<div className={classes.container}>
-			<Typography variant="h5" component="h5" className={classes.title}>
+		<div>
+			<p className={classes.title}>
 				{title.toUpperCase()}
-			</Typography>
+			</p>
 			<Grid container spacing={3}>
 				{items.map(item => (
 					<Grid item xs={3} key={item.id} >

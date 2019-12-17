@@ -9,7 +9,7 @@ export const useStyles = makeStyles(theme => ({
   },
   image: {
     position: "relative",
-	border: "1px solid #fff",
+    border: "1px solid #fff",
     height: 200,
     [theme.breakpoints.down("xs")]: {
       width: "100% !important", // Overrides inline-style
@@ -54,10 +54,7 @@ export const useStyles = makeStyles(theme => ({
     left: 0,
     right: 0,
     top: 0,
-    bottom: 0,
-    backgroundColor: theme.palette.common.black,
-    opacity: 0.4,
-    transition: theme.transitions.create("opacity")
+    bottom: 0
   },
   imageTitle: {
     position: "relative",
