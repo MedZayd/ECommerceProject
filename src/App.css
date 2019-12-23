@@ -1,5 +1,5 @@
 body {
-  background-image: url("./images/body-background.jpg");
+  background-image: url("./images/background2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -25,16 +25,17 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(0, 0, 0);
+  background: rgb(0, 0, 0, 0);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #FFFFFF;
+  background: #ffffff;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #FFFFFF;
+  background: #ffffff;
   cursor: pointer;
 }

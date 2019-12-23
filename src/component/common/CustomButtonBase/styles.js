@@ -47,7 +47,7 @@ export const useStyles = makeStyles(theme => ({
     top: 0,
     bottom: 0,
     backgroundSize: "cover",
-    backgroundPosition: "center 40%"
+    backgroundPosition: "center 50%"
   },
   imageBackdrop: {
     position: "absolute",

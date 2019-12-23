@@ -7,7 +7,7 @@ import ShopePage from "./component/ShopPage";
 import MenuBar from "./component/MenuBar";
 import MenuList from "./component/MenuList";
 import NotFound from "./component/NotFound";
-
+import Authentication from "./component/Authentication";
 
 function App() {
   return (
@@ -16,9 +16,10 @@ function App() {
       <div className="contentContainer">
         <div className="content">
           <Switch>
-            <Route exact path='/' component={MenuList} />
-            <Route exact path='/shop' component={ShopePage} />
-            <Route path='*' component={NotFound} />
+            <Route exact path="/" component={MenuList} />
+            <Route exact path="/shop" component={ShopePage} />
+            <Route exact path="/signIn" component={Authentication} />
+            <Route path="*" component={NotFound} />
           </Switch>
         </div>
       </div>

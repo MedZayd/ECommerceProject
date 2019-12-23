@@ -1,16 +1,16 @@
-import {Grid, Typography} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 import CollectionItem from "../CollectionItem";
-import type {ItemType} from '../../../types/shop-page';
+import type { ItemType } from '../../../types/shop-page';
 import React from 'react';
-import {useStyles} from "./styles";
+import { useStyles } from "./styles";
 
 type Props = {
 	title: string,
 	items: ItemType[],
 }
 
-export default function CollectionPreview({title, items}: Props) {
+export default function CollectionPreview({ title, items }: Props) {
 	const classes = useStyles();
 	return (
 		<div>
