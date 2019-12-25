@@ -36,6 +36,7 @@ export const useStyles = makeStyles(() => ({
     textDecoration: "none",
     fontSize: 20,
     margin: "auto auto",
-    color: colors.white
+    color: colors.white,
+    cursor: "pointer"
   }
 }));

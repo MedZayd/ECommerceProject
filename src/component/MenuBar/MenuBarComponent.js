@@ -3,8 +3,13 @@ import React from "react";
 import { useStyles } from "./styles";
 import { Link } from "react-router-dom";
 import logo from "../../images/icons/crown.svg";
+import {auth} from "../../firebase/firebase.utils";
 
-const MenuBar = () => {
+type Props = {
+  currentUser: Object
+}
+
+const MenuBar = ({currentUser}: Props) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
@@ -20,9 +25,16 @@ const MenuBar = () => {
           </Link>
         </div>
         <div className={classes.linkHolder}>
-          <Link to="/signin" className={classes.link}>
-            Sign In
-          </Link>
+          { currentUser ?
+            (
+              <div className={classes.link} onClick={() => auth.signOut()}>Sign Out</div>
+            )
+            : (
+              <Link to="/signin" className={classes.link}>
+                Sign In
+              </Link>
+            )
+          }
         </div>
       </div>
     </div>

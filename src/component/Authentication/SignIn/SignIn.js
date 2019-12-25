@@ -4,8 +4,8 @@ import FieldInput from "../../common/FieldInput";
 import { withStyles } from "@material-ui/core";
 import { styles } from "./styles";
 import CustomButton from "../../common/CustomButton";
-import GoogleIcon from "../../../images/icons/google.svg";
 import GoogleFilledIcon from "../../../images/icons/google-filled.svg";
+import { signInWithGoogle } from "../../../firebase/firebase.utils";
 
 type Props = {
   classes: Object
@@ -13,14 +13,12 @@ type Props = {
 
 type State = {
   email: string,
-  password: string,
-  googleIconHover: boolean
+  password: string
 };
 
 const DEFAULT_STATE = {
   email: "",
-  password: "",
-  googleIconHover: false
+  password: ""
 };
 
 class SignIn extends Component<Props, State> {
@@ -45,13 +43,9 @@ class SignIn extends Component<Props, State> {
     this.setState(DEFAULT_STATE);
   };
 
-  handleOnHover = () => {
-    this.setState(prevState => ({googleIconHover: !prevState.googleIconHover}));
-  }
-
   render() {
     const { classes } = this.props;
-    const { email, password, googleIconHover } = this.state;
+    const { email, password } = this.state;
     return (
       <div>
         <Header
@@ -60,7 +54,7 @@ class SignIn extends Component<Props, State> {
         />
         <form className={classes.container}>
           <FieldInput
-            id="email"
+            id="sign_email"
             label="Email"
             type="email"
             value={email}
@@ -70,7 +64,7 @@ class SignIn extends Component<Props, State> {
             required
           />
           <FieldInput
-            id="password"
+            id="sign_password"
             label="Password"
             type="password"
             value={password}
@@ -80,18 +74,21 @@ class SignIn extends Component<Props, State> {
             required
           />
           <div className={classes.signInButtons}>
-            <CustomButton variant="outlined">Sign IN</CustomButton>
+            <CustomButton variant="outlined" onClick={this.handleSubmit}>
+              <span>Sign IN</span>
+            </CustomButton>
             <CustomButton
               variant="outlined"
-              onMouseEnter={this.handleOnHover}
-              onMouseLeave={this.handleOnHover}
+              onClick={signInWithGoogle}
               startIcon={
-                googleIconHover
-                  ? <img src={GoogleFilledIcon} className={classes.googleIcon} alt="" />
-                  : <img src={GoogleIcon} className={classes.googleIcon} alt="" />
+                <img
+                  src={GoogleFilledIcon}
+                  className={classes.googleIcon}
+                  alt=""
+                />
               }
             >
-              Sign in with Google
+              <span>Sign in with Google</span>
             </CustomButton>
           </div>
         </form>

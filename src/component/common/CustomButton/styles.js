@@ -12,5 +12,11 @@ export const StyledButton = withStyles({
       backgroundColor: colors.white,
       fontFamily: "JosefinSans-Bold"
     }
+  },
+  label: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    lineHeight: 2
   }
 })(Button);
